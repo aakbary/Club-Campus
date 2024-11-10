@@ -1,6 +1,6 @@
 /* Club Compass Logo */
-img{
-    width: 50px;
+img {
+  width: 50px;
 }
 /* Club Header */
 .club-header {
@@ -89,88 +89,3 @@ button {
   margin-top: 15px;
 }
 
-/* Mobile Device Media Query */
-@media only screen and (max-width: 768px) {
-  .container {
-    padding: 0 20px;
-    max-width: 100%;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .title-container {
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    margin-right: 0;
-  }
-
-  .title-image {
-    width: 100px;
-    margin-bottom: 10px;
-  }
-
-  .dropdown-menu {
-    width: 100%;
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  .circles {
-    gap: 20px;
-  }
-
-  .circle {
-    width: 100px;
-    height: 100px;
-  }
-
-  .circle:active {
-    width: 95px;
-    height: 95px;
-    transition: 0.2s;
-  }
-}
-
-
-@media (min-width: 600px) and (max-width: 900px) {
-  .club-header h1 {
-    font-size: 2rem;
-  }
-
-  .club-image-placeholder {
-    height: 150px;
-  }
-
-  .club-description {
-    font-size: 1rem;
-    padding: 15px;
-  }
-
-  .helpful-links {
-    flex-direction: row;
-    gap: 5px;
-  }
-
-  .reviews-section h2,
-  .submit-review h2 {
-    font-size: 1.5rem;
-  }
-
-  .review h3 {
-    font-size: 1.1rem;
-  }
-
-  .submit-review button {
-    padding: 8px 15px;
-    font-size: 0.9rem;
-  }
-
-  .submission-agreement {
-    font-size: 0.85rem;
-  }
-}
