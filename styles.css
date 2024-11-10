@@ -120,7 +120,7 @@ h1 {
   appearance: none;
 }
 
-
+/* Mobile Device Media Query */
 @media only screen and (max-width: 768px) {
   .container {
     padding: 0 20px;
