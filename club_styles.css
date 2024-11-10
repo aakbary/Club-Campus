@@ -135,3 +135,42 @@ button {
     transition: 0.2s;
   }
 }
+
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .club-header h1 {
+    font-size: 2rem;
+  }
+
+  .club-image-placeholder {
+    height: 150px;
+  }
+
+  .club-description {
+    font-size: 1rem;
+    padding: 15px;
+  }
+
+  .helpful-links {
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  .reviews-section h2,
+  .submit-review h2 {
+    font-size: 1.5rem;
+  }
+
+  .review h3 {
+    font-size: 1.1rem;
+  }
+
+  .submit-review button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .submission-agreement {
+    font-size: 0.85rem;
+  }
+}

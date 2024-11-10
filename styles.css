@@ -166,3 +166,23 @@ h1 {
     transition: 0.2s;
   }
 }
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .title-container h1 {
+    font-size: 2rem;
+  }
+
+  .title-container img {
+    width: 100px;
+    height: auto;
+  }
+
+  .dropdown-menu {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  .circles {
+    width: 90%;
+  }
+}
