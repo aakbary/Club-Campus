@@ -40,16 +40,27 @@ img {
 .starRating {
   list-style-type: none;
   display: flex;
+  flex-direction: row-reverse;
+  float: left;
 }
 
-.starRating li button {
+.starRating button {
   background-color: transparent;
   font-size: 40px;
   color: black;
 }
 
-.starRating li button:hover {
-  font-size: 42px;
+.starRating button:hover {
+  color: orange;
+  transition: 0.25s;
+}
+
+.starRating button:hover ~ button {
+  color: orange;
+}
+
+.starRating button.selected ~ button {
+  color: orange;
 }
 
 .rating {
