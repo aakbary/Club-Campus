@@ -37,6 +37,21 @@ img {
   margin: 0 0 5px;
 }
 
+.starRating {
+  list-style-type: none;
+  display: flex;
+}
+
+.starRating li button {
+  background-color: transparent;
+  font-size: 40px;
+  color: black;
+}
+
+.starRating li button:hover {
+  font-size: 42px;
+}
+
 .rating {
   font-size: 1.2em;
   margin-bottom: 10px;
@@ -88,4 +103,3 @@ button {
   color: #666;
   margin-top: 15px;
 }
-

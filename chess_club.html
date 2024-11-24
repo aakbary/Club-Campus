@@ -6,12 +6,15 @@
     <title>Chess Club</title>
     <link rel="stylesheet" href="club_styles.css" />
     <link rel="stylesheet" href="device_styles.css" />
+    <!-- icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <a class="logo" href="index.html" class="back-link"
-      ><img
-        src="./assets/homePageIcon.webp"
-        title="Return Home"
+      ><img src="./assets/homePageIcon.webp" title="Return Home"
     /></a>
 
     <header class="club-header">
@@ -38,7 +41,9 @@
       <h2>Reviews</h2>
       <div class="review">
         <h3>Anonymous1</h3>
+
         <div class="rating">★★★★★</div>
+
         <p>This is a sample review for the Chess Club...</p>
       </div>
       <div class="review">
@@ -55,7 +60,14 @@
 
     <section class="submit-review">
       <h2>Submit Your Own Review!</h2>
-      <div class="rating">★★★★★</div>
+
+      <ul class="starRating">
+        <li><button id="oneStar" onclick="handleButton(1)">★</button></li>
+        <li><button id="oneStar" onclick="handleButton(2)">★</button></li>
+        <li><button id="oneStar" onclick="handleButton(3)">★</button></li>
+        <li><button id="oneStar" onclick="handleButton(4)">★</button></li>
+        <li><button id="oneStar" onclick="handleButton(5)">★</button></li>
+      </ul>
       <textarea placeholder="Type your review here..."></textarea>
       <button type="submit">Submit</button>
       <p class="submission-agreement">
