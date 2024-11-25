@@ -38,7 +38,7 @@
       </div>
     </header>
 
-    <section class="reviews-section">
+    <section id="reviews-section">
       <h2>Reviews</h2>
       <div class="review">
         <h3>Anonymous1</h3>
@@ -63,14 +63,17 @@
       <h2>Submit Your Own Review!</h2>
 
       <div class="starRating">
-        <button onclick="handleButton(5)" value="1">★</button>
-        <button onclick="handleButton(4)" value="2">★</button>
-        <button onclick="handleButton(3)" value="3">★</button>
-        <button onclick="handleButton(2)" value="4">★</button>
-        <button onclick="handleButton(1)" value="5">★</button>
+        <button class="star" onclick="handleButton(1)" value="5">★</button>
+        <button class="star" onclick="handleButton(2)" value="4">★</button>
+        <button class="star" onclick="handleButton(3)" value="3">★</button>
+        <button class="star" onclick="handleButton(4)" value="2">★</button>
+        <button class="star" onclick="handleButton(5)" value="1">★</button>
       </div>
-      <textarea placeholder="Type your review here..."></textarea>
-      <button type="submit">Submit</button>
+      <textarea
+        id="writtenReview"
+        placeholder="Type your review here..."
+      ></textarea>
+      <button type="submit" onclick="handleSubmit()">Submit</button>
       <p class="submission-agreement">
         By submitting a review, you agree to share feedback that is respectful
         and free from inappropriate language, harassment, or any content that

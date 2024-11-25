@@ -12,14 +12,14 @@ img {
 }
 
 /* Reviews Section */
-.reviews-section {
+#reviews-section {
   width: 100%;
   padding: 20px;
   background-color: #e0e0e0;
   margin-bottom: 20px;
 }
 
-.reviews-section h2 {
+#reviews-section h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
@@ -44,22 +44,20 @@ img {
   float: left;
 }
 
-.starRating button {
+.starRating .star {
   background-color: transparent;
   font-size: 40px;
   color: black;
 }
 
-.starRating button:hover {
+.starRating .star:hover ~ .star,
+.star:hover {
   color: orange;
   transition: 0.25s;
 }
 
-.starRating button:hover ~ button {
-  color: orange;
-}
-
-.starRating button.selected ~ button {
+.starRating .star.selected ~ .star,
+.star.selected {
   color: orange;
 }
 
