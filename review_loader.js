@@ -1,5 +1,6 @@
 function loadReviews() {
-  fetch("./club-reviews/chess_club.txt")
+  var pagePath = document.getElementById("pagePath").getAttribute("data-path");
+  fetch(pagePath)
     .then((response) => response.text())
     .then((data) => {
       var allReviews = data.split("~");
@@ -37,6 +38,5 @@ function getReview(nameContent, ratingValue, writtenReviewContent) {
 
   return currentReview;
 }
-
 
 loadReviews();

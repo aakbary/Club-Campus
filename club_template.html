@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta id="pagePath" data-path="./club-reviews/sga.txt">
-
-    <title>Student Government Association</title>
+    <title>Sample Club</title>
     <link rel="stylesheet" href="club_styles.css" />
     <link rel="stylesheet" href="device_styles.css" />
+    <!-- icon library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="form.js"></script>
     <script src="review_loader.js"></script>
   </head>
@@ -17,7 +20,7 @@
     /></a>
 
     <header class="club-header">
-      <h1 id="clubName">Student Government Association</h1>
+      <h1 id="clubName">Sample Club</h1>
       <div class="club-image-placeholder"></div>
       <p class="club-description">
         A student-run club that generally meets Mondays at 6 PM on the first
@@ -40,7 +43,9 @@
       <h2>Reviews</h2>
       <div class="review">
         <h3>Anonymous1</h3>
+
         <div class="rating">★★★★★</div>
+
         <p>This is a sample review for the Chess Club...</p>
       </div>
       <div class="review">
@@ -58,6 +63,7 @@
     <section id="submit-review">
       <h2>Submit Your Own Review!</h2>
 
+      <!-- <button onclick="readTextFile()"></button> -->
       <div class="starRating">
         <button class="star" onclick="handleButton(1)" value="5">★</button>
         <button class="star" onclick="handleButton(2)" value="4">★</button>

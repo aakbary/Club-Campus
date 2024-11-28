@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="pagePath" data-path="./club-reviews/ultimate_frisbee.txt">
+
     <title>Ultimate Frisbee</title>
     <link rel="stylesheet" href="club_styles.css" />
     <link rel="stylesheet" href="device_styles.css" />
+    <script src="form.js"></script>
+    <script src="review_loader.js"></script>
   </head>
   <body>
     <a class="logo" href="index.html" class="back-link"
-      ><img
-      src="./assets/homePageIcon.webp"
-      title="Return Home"
+      ><img src="./assets/homePageIcon.webp" title="Return Home"
     /></a>
 
     <header class="club-header">
-      <h1>Ultimate Frisbee</h1>
+      <h1 id="clubName">Ultimate Frisbee</h1>
       <div class="club-image-placeholder"></div>
       <p class="club-description">
         A student-run club that generally meets Mondays at 6 PM on the first
@@ -34,7 +36,7 @@
       </div>
     </header>
 
-    <section class="reviews-section">
+    <section id="reviews-section">
       <h2>Reviews</h2>
       <div class="review">
         <h3>Anonymous1</h3>
@@ -53,11 +55,23 @@
       </div>
     </section>
 
-    <section class="submit-review">
+    <section id="submit-review">
       <h2>Submit Your Own Review!</h2>
-      <div class="rating">★★★★★</div>
-      <textarea placeholder="Type your review here..."></textarea>
-      <button type="submit">Submit</button>
+
+      <div class="starRating">
+        <button class="star" onclick="handleButton(1)" value="5">★</button>
+        <button class="star" onclick="handleButton(2)" value="4">★</button>
+        <button class="star" onclick="handleButton(3)" value="3">★</button>
+        <button class="star" onclick="handleButton(4)" value="2">★</button>
+        <button class="star" onclick="handleButton(5)" value="1">★</button>
+      </div>
+      <label>Name:</label>
+      <input id="name" placeholder=" Anonymous"></input>
+      <textarea
+        id="writtenReview"
+        placeholder="Type your review here..."
+      ></textarea>
+      <button id="submitButton" type="submit" onclick="handleSubmit()">Submit</button>
       <p class="submission-agreement">
         By submitting a review, you agree to share feedback that is respectful
         and free from inappropriate language, harassment, or any content that
