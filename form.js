@@ -23,29 +23,49 @@ function handleSubmit() {
     alert("Invalid Entry");
     return;
   }
-  var reviewSection = document.getElementById("reviews-section");
-  var result = newReview();
-  result.classList.add("review");
-  reviewSection.appendChild(result);
+
+  var clubName = document.getElementById("clubName").value;
+  var name = document.getElementById("name").value;
+
+  if (name == "") {
+    name = "Anonymous";
+  }
+
+  var writtenReivew = document.getElementById("writtenReview").value;
+
+  postReivew(clubName, name, starRating, writtenReivew);
+
+  closeForm();
 }
 
-function newReview() {
-  const newReview = document.createElement("div");
+function postReivew(clubName, name, rating, writtenReivew) {
+  const formURL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSf9xBLr7gIjX3eI-kiqIm81CwcPNNdtOH51leYR-0KUrQPgjg/formResponse";
 
-  const name = document.createElement("h3");
-  name.textContent = "Anonymous";
+  const formData = new URLSearchParams();
+  formData.append("entry.609640095", clubName);
+  formData.append("entry.330908542", name);
+  formData.append("entry.1197122180", rating);
+  formData.append("entry.692624728", writtenReivew);
 
-  const rating = document.createElement("div");
-  rating.textContent = starRating;
+  fetch(formURL, {
+    method: "POST",
+    body: formData,
+    mode: "no-cors",
+  });
+}
 
-  var reviewText = document.getElementById("writtenReview").value;
-  const review = document.createElement("p");
-  review.textContent = reviewText;
-  review.classList.add("rating");
+function closeForm() {
+  var newHeading = document.createElement("h2");
+  newHeading.textContent = "Thanks For You Reivew!";
 
-  newReview.appendChild(name);
-  newReview.appendChild(rating);
-  newReview.appendChild(review);
+  var newText = document.createElement("p");
+  newText.textContent = "Your review is under examination";
 
-  return newReview;
+  var section = document.getElementById("submit-review");
+
+  section.innerHTML = "";
+
+  section.appendChild(newHeading);
+  section.appendChild(newText);
 }

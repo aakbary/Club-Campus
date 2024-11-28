@@ -1,9 +1,3 @@
-// const fs = require("fs");
-// const data = fs.readFileSync(
-//   "./Club-Compass/club-reviews/chess_club.txt",
-//   "utf8"
-// );
-
 function loadReviews() {
   fetch("./club-reviews/chess_club.txt")
     .then((response) => response.text())
@@ -43,5 +37,6 @@ function getReview(nameContent, ratingValue, writtenReviewContent) {
 
   return currentReview;
 }
+
 
 loadReviews();

@@ -42,6 +42,7 @@ img {
   display: flex;
   flex-direction: row-reverse;
   float: left;
+  justify-content: left;
 }
 
 .starRating .star {
@@ -66,22 +67,35 @@ img {
   margin-bottom: 10px;
 }
 
+#name {
+  width: 150px;
+  height: 25px;
+}
+
 /* Submit Review Section */
-.submit-review {
+#submit-review {
   width: 100%;
   padding: 20px;
   background-color: #d0d0d0;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.submit-review h2 {
+#submit-review h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
 }
 
-.submit-review .rating {
+#submit-review .rating {
   font-size: 1.5em;
   margin-bottom: 10px;
+}
+
+#submitButton:disabled {
+  pointer-events: none;
+  user-select: none;
+  color: #838181;
 }
 
 textarea {
@@ -96,7 +110,6 @@ textarea {
 
 button {
   display: block;
-  width: 100%;
   padding: 10px;
   margin-top: 10px;
   background-color: #333;
