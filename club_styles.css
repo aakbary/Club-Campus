@@ -67,6 +67,12 @@ img {
   margin-bottom: 10px;
 }
 
+.starReview{
+  color:orange;
+  font-size: 23px;
+  -webkit-text-stroke: 0.5px black;
+}
+
 #name {
   width: 150px;
   height: 25px;

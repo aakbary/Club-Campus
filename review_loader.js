@@ -26,7 +26,26 @@ function getReview(nameContent, ratingValue, writtenReviewContent) {
   name.textContent = nameContent;
 
   const rating = document.createElement("div");
-  rating.textContent = ratingValue;
+  rating.classList.add("starReview");
+  switch (ratingValue) {
+    case "1":
+      rating.textContent = "★☆☆☆☆";
+      break;
+    case "2":
+      rating.textContent = "★★☆☆☆";
+      break;
+    case "3":
+      rating.textContent = "★★★☆☆";
+      break;
+    case "4":
+      rating.textContent = "★★★★☆";
+      break;
+    case "5":
+      rating.textContent = "★★★★★";
+      break;
+    default:
+      break;
+  }
 
   const review = document.createElement("p");
   review.textContent = writtenReviewContent;
