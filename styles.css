@@ -120,4 +120,36 @@ h1 {
   appearance: none;
 }
 
+#dropdown-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+}
+#dropdown-list li {
+  display: none;
+}
+#dropdown-list li.visible {
+  display: block;
+}
 
+.clubOption {
+  background-color: grey;
+  border-radius: 5px;
+  height: 30px;
+  width: 250px;
+  justify-content: center;
+  align-self: center;
+}
+
+.clubOption a {
+  width: 250px;
+  height: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
