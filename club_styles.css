@@ -1,20 +1,50 @@
 /* Club Compass Logo */
+body {
+  background: radial-gradient(#264653, #5a8799);
+}
+
 img {
   width: 50px;
 }
 /* Club Header */
 .club-header {
   width: 100%;
+  border-radius: 10px;
   text-align: center;
   padding: 20px;
   background-color: white;
   margin-bottom: 20px;
 }
 
+.club-description{
+
+}
+
+.helpful-links{
+  display: flex;       
+  justify-content: center;
+  justify-self: center;
+  align-items: center;       
+  width: 250px;
+  height: 75px;
+  border-radius: 10px; padding: 0 10px;  
+}
+
+.helpful-links img{
+  margin:0 15px;
+
+  width:75px;
+}
+
+.helpful-links img:hover{
+  width: 78px;
+}
+
 /* Reviews Section */
 #reviews-section {
   width: 100%;
   padding: 20px;
+  border-radius: 10px;
   background-color: #e0e0e0;
   margin-bottom: 20px;
 }
@@ -67,8 +97,8 @@ img {
   margin-bottom: 10px;
 }
 
-.starReview{
-  color:orange;
+.starReview {
+  color: orange;
   font-size: 23px;
   -webkit-text-stroke: 0.5px black;
 }
@@ -82,6 +112,7 @@ img {
 #submit-review {
   width: 100%;
   padding: 20px;
+  border-radius: 10px;
   background-color: #d0d0d0;
   margin-bottom: 20px;
   display: flex;
