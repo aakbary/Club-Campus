@@ -8,8 +8,8 @@
     <title>Anime Club</title>
     <link rel="stylesheet" href="club_styles.css" />
     <link rel="stylesheet" href="device_styles.css" />
-    <script src="form.js"></script>
-    <script src="review_loader.js"></script>
+    <script src="form.js" defer></script>
+    <script src="review_loader.js" defer></script>
   </head>
   <body>
     <a class="logo" href="index.html" class="back-link"
@@ -44,11 +44,11 @@
       <h2>Submit Your Own Review!</h2>
 
       <div class="starRating">
-        <button class="star" onclick="handleButton(1)" value="5">★</button>
-        <button class="star" onclick="handleButton(2)" value="4">★</button>
-        <button class="star" onclick="handleButton(3)" value="3">★</button>
-        <button class="star" onclick="handleButton(4)" value="2">★</button>
-        <button class="star" onclick="handleButton(5)" value="1">★</button>
+        <button class="star" value="5">★</button>
+        <button class="star" value="4">★</button>
+        <button class="star" value="3">★</button>
+        <button class="star" value="2">★</button>
+        <button class="star" value="1">★</button>
       </div>
       <label>Name:</label>
       <input id="name" placeholder=" Anonymous"></input>
@@ -56,12 +56,11 @@
         id="writtenReview"
         placeholder="Type your review here..."
       ></textarea>
-      <button id="submitButton" type="submit" onclick="handleSubmit()">Submit</button>
+      <button id="submitButton" type="submit">Submit</button>
       <p class="submission-agreement">
         By submitting a review, you agree to share feedback that is respectful
         and free from inappropriate language, harassment, or any content that
         promotes bullying.
       </p>
-    </section>
-  </body>
+    </section>  </body>
 </html>
