@@ -60,7 +60,7 @@ function closeForm() {
   newHeading.textContent = "Thanks For You Reivew!";
 
   var newText = document.createElement("p");
-  newText.textContent = "Your review is under examination";
+  newText.textContent = "By submitting a review, you agree to share feedback that is respectful and free from inappropriate language, harassment, or any content that promotes bullying.";
 
   var section = document.getElementById("submit-review");
 
