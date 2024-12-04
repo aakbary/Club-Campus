@@ -1,3 +1,5 @@
+let reviewRatingArray = [];
+
 function loadReviews() {
   var pagePath = document.getElementById("pagePath").getAttribute("data-path");
   fetch(pagePath)
@@ -10,12 +12,14 @@ function loadReviews() {
         review = allReviews[i].split("|");
         var name = review[0];
         var rating = review[1];
+        reviewRatingArray.push(parseInt(rating));
         var writtenReview = review[2];
 
         var result = getReview(name, rating, writtenReview);
         result.classList.add("review");
         reviewSection.appendChild(result);
       }
+      displayAvgReview();
     });
 }
 
@@ -46,7 +50,6 @@ function getReview(nameContent, ratingValue, writtenReviewContent) {
     default:
       break;
   }
-
   const review = document.createElement("p");
   review.textContent = writtenReviewContent;
   review.classList.add("rating");
@@ -56,6 +59,27 @@ function getReview(nameContent, ratingValue, writtenReviewContent) {
   currentReview.appendChild(review);
 
   return currentReview;
+}
+
+function displayAvgReview() {
+  var reviewsHeader = document.getElementById("reviewsHeader");
+  var avgRating = document.createElement("p");
+  avgRating.classList.add("avgStar");
+  avgRating.innerText = "★ " + calcAvgReview() + " ★";
+
+  reviewsHeader.appendChild(avgRating);
+}
+
+function calcAvgReview() {
+  let sum = 0;
+  console.log(reviewRatingArray);
+  for (var i = 0; i < reviewRatingArray.length; i++) {
+    console.log("here");
+    console.log(sum);
+    sum += reviewRatingArray[i];
+  }
+
+  return sum / reviewRatingArray.length;
 }
 
 loadReviews();
