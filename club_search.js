@@ -1,4 +1,4 @@
-document.getElementById("searchBar").addEventListener("input", Search());
+document.getElementById("searchBar").addEventListener("input", Search);
 
 function Search() {
   var input = document.getElementById("searchBar").value.toLowerCase();

@@ -1,9 +1,16 @@
 var starRating = 0;
 
+if (document.getElementById("resetButton") != null) {
+  document.getElementById("resetButton").addEventListener("click", handleReset);
+}
+
 if (document.getElementById("submitButton") != null) {
   document
     .getElementById("submitButton")
-    .addEventListener("click", handleSubmit);
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+      handleSubmit();
+    });
 }
 
 var starElements = document.getElementsByClassName("star");
@@ -32,7 +39,15 @@ function handleButton(event) {
 
 function handleSubmit() {
   if (starRating < 1 || document.getElementById("writtenReview").value == "") {
-    alert("Invalid Entry");
+    var errorStr = "";
+    if (starRating < 1) {
+      errorStr += "Please Select a Star Rating";
+    }
+    if (document.getElementById("writtenReview").value == "") {
+      errorStr += "\n Please enter Review in text box";
+    }
+
+    alert(errorStr);
     return;
   }
 
@@ -81,4 +96,17 @@ function closeForm() {
 
   section.appendChild(newHeading);
   section.appendChild(newText);
+}
+
+function handleReset() {
+  const stars = document.getElementsByClassName("star");
+
+  for (let star of stars) {
+    if (star.classList.contains("selected")) {
+      star.classList.remove("selected");
+    }
+  }
+  starRating = 0;
+  document.getElementById("name").value = "";
+  document.getElementById("writtenReview").value = "";
 }

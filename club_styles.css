@@ -1,14 +1,26 @@
 /* Club Compass Logo */
 body {
   background: radial-gradient(#264653, #5a8799);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-  width: 50px;
+  width: 75px;
+  margin-left: 20px;
 }
+
+.logo {
+  display: block;
+  position: relative;
+  right: 49%;
+}
+
 /* Club Header */
 .club-header {
-  width: 100%;
+  width: 80%;
   border-radius: 10px;
   text-align: center;
   padding: 20px;
@@ -16,37 +28,41 @@ img {
   margin-bottom: 20px;
 }
 
-.club-description{
-
+.club-description {
+  align-self: center;
+  /* max-width: 850px; */
 }
 
-.helpful-links{
-  display: flex;       
+.helpful-links {
+  display: flex;
   justify-content: center;
   justify-self: center;
-  align-items: center;       
+  align-items: center;
   width: 250px;
   height: 75px;
-  border-radius: 10px; padding: 0 10px;  
+  border-radius: 10px;
+  padding: 0 10px;
 }
 
-.helpful-links img{
-  margin:0 15px;
+.helpful-links img {
+  margin: 0 15px;
 
-  width:75px;
+  width: 75px;
 }
 
-.helpful-links img:hover{
+.helpful-links img:hover {
   width: 78px;
 }
 
 /* Reviews Section */
 #reviews-section {
-  width: 100%;
+  max-width: 600px;
+  width: 500px;
   padding: 20px;
   border-radius: 10px;
   background-color: #e0e0e0;
   margin-bottom: 20px;
+  align-items: center;
 }
 
 #reviews-section h2 {
@@ -71,7 +87,6 @@ img {
   list-style-type: none;
   display: flex;
   flex-direction: row-reverse;
-  float: left;
   justify-content: left;
 }
 
@@ -110,7 +125,8 @@ img {
 
 /* Submit Review Section */
 #submit-review {
-  width: 100%;
+  max-width: 800px;
+  width: 800px;
   padding: 20px;
   border-radius: 10px;
   background-color: #d0d0d0;
@@ -129,6 +145,14 @@ img {
   margin-bottom: 10px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  align-self: center;
+  height: auto;
+}
+
 #submitButton:disabled {
   pointer-events: none;
   user-select: none;
@@ -136,17 +160,31 @@ img {
 }
 
 textarea {
-  width: 100%;
+  max-width: 400px;
+  width: 400px;
   height: 100px;
   padding: 10px;
   margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  resize: vertical;
+  resize: none;
+}
+
+.formButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+#resetButton {
+  width: 110px;
+}
+#submitButton {
+  max-width: 250px;
+  width: 200px;
+  align-self: center;
 }
 
 button {
-  display: block;
   padding: 10px;
   margin-top: 10px;
   background-color: #333;
