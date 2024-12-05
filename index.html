@@ -6,7 +6,7 @@
     <title>Club Compass</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="device_styles.css" />
-    <script src="club_search.js"></script>
+    <script src="club_search.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -23,7 +23,6 @@
           id="searchBar"
           type="text"
           placeholder="Search..."
-          oninput="Search()"
           autocomplete="off"
         />
         <ul id="dropdown-list">
@@ -93,7 +92,7 @@
         <a
           href="muslim_student_association.html"
           class="circle"
-          style="background-image: url('images/varsity_athletics.png')"
+          style="background-image: url('./assets//MSALogo.jpeg')"
           title="Muslim Student Association"
         ></a>
         <a
@@ -108,6 +107,18 @@
           style="background-image: url('./assets//BlueprintLogo.png')"
           title="BluePrint"
         ></a>
+      </div>
+      <div class="contact">
+        <a
+          id="contactUs"
+          href="mailto:OfficalClubCompass@gmail.com"
+          target="blank"
+        >
+          Don't See Your Club?</a
+        >
+
+        <p>Send Us an Email at OfficialClubCompass@gmail.com</p>
+        <p>to get your club signed up</p>
       </div>
     </div>
   </body>

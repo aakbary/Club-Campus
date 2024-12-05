@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta id="pagePath" data-path="./club-reviews/sga.txt">
+    <meta id="pagePath" data-path="./club-reviews/sga.txt" />
 
     <title>Student Government Association</title>
     <link rel="stylesheet" href="club_styles.css" />
     <link rel="stylesheet" href="device_styles.css" />
-    <script src="form.js"></script>
-    <script src="review_loader.js"></script>
+    <script src="form.js" defer></script>
+    <script src="review_loader.js" defer></script>
   </head>
   <body>
     <a class="logo" href="index.html" class="back-link"
@@ -22,41 +22,57 @@
 
       <div class="club-image-placeholder"></div>
       <p class="club-description">
-        A student-run club that generally meets Mondays at 6 PM on the first
-        floor of the library. With many avid members of all different skill
-        levels, it is a great way to meet new people and enjoy a competitive
-        game.
+        The mission of the Student Government Association of Stevens Institute
+        of Technology (SGA) is to advocate for the undergraduate student body
+        and serve as a means of communication and input between students,
+        faculty, and staff. The SGAs imperative is enhancing the student
+        experience and quality of life on campus while providing developmental
+        opportunities for students. Charging itself with being a voice for the
+        student body, the SGA is responsive to the issues, rights, and concerns
+        of Stevens students. The SGA upholds a high standard of integrity and
+        represents the university and student body with honor.
       </p>
 
       <div class="helpful-links">
         <span class="circle-icon"></span>
-        <a href="https://discord.gg/fYNNKkqPkU" target="_blank" title="Discord"><img src="./assets/discordLogo.webp"></a>
-        <a href="https://ducklink.stevens.edu/scc/home/" target="_blank" title="Duck Link"><img src="./assets/StevensLogo.png"></a>
+        <a href="https://discord.gg/fYNNKkqPkU" target="_blank" title="Discord"
+          ><img src="./assets/discordLogo.webp"
+        /></a>
+        <a
+          href="https://ducklink.stevens.edu/feeds?type=club&type_id=35513&tab=about"
+          target="_blank"
+          title="Duck Link"
+          ><img src="./assets/StevensLogo.png"
+        /></a>
       </div>
     </header>
 
     <section id="reviews-section">
-      <h2>Reviews</h2>
-
+      <h2 id="reviewsHeader">Reviews</h2>
     </section>
 
     <section id="submit-review">
       <h2>Submit Your Own Review!</h2>
 
-      <div class="starRating">
-        <button class="star" onclick="handleButton(1)" value="5">★</button>
-        <button class="star" onclick="handleButton(2)" value="4">★</button>
-        <button class="star" onclick="handleButton(3)" value="3">★</button>
-        <button class="star" onclick="handleButton(4)" value="2">★</button>
-        <button class="star" onclick="handleButton(5)" value="1">★</button>
-      </div>
-      <label>Name:</label>
-      <input id="name" placeholder=" Anonymous"></input>
-      <textarea
-        id="writtenReview"
-        placeholder="Type your review here..."
-      ></textarea>
-      <button id="submitButton" type="submit" onclick="handleSubmit()">Submit</button>
+      <form method="POST">
+        <div class="starRating">
+          <button class="star" value="5" type="button">★</button>
+          <button class="star" value="4" type="button">★</button>
+          <button class="star" value="3" type="button">★</button>
+          <button class="star" value="2" type="button">★</button>
+          <button class="star" value="1" type="button">★</button>
+        </div>
+        <label>Name:</label>
+        <input id="name" placeholder=" Anonymous" />
+        <textarea
+          id="writtenReview"
+          placeholder="Type your review here..."
+        ></textarea>
+        <div class="formButtons">
+          <button id="resetButton" type="button">Reset Form</button>
+          <button id="submitButton" type="submit">Submit</button>
+        </div>
+      </form>
       <p class="submission-agreement">
         By submitting a review, you agree to share feedback that is respectful
         and free from inappropriate language, harassment, or any content that
