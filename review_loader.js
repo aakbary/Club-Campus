@@ -72,10 +72,7 @@ function displayAvgReview() {
 
 function calcAvgReview() {
   let sum = 0;
-  console.log(reviewRatingArray);
   for (var i = 0; i < reviewRatingArray.length; i++) {
-    console.log("here");
-    console.log(sum);
     sum += reviewRatingArray[i];
   }
 

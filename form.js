@@ -38,13 +38,20 @@ function handleButton(event) {
 }
 
 function handleSubmit() {
-  if (starRating < 1 || document.getElementById("writtenReview").value == "") {
+  if (
+    starRating < 1 ||
+    document.getElementById("writtenReview").value == "" ||
+    document.getElementById("writtenReview").value.length > 500
+  ) {
     var errorStr = "";
     if (starRating < 1) {
       errorStr += "Please Select a Star Rating";
     }
     if (document.getElementById("writtenReview").value == "") {
       errorStr += "\n Please enter Review in text box";
+    }
+    if (document.getElementById("writtenReview").value.length > 500) {
+      errorStr += "\n Reivew Exceeds 500 Character limit";
     }
 
     alert(errorStr);

@@ -84,6 +84,7 @@ img {
   padding: 15px;
   margin-bottom: 10px;
   border-radius: 8px;
+  word-wrap: break-word;
 }
 
 .review h3 {
@@ -156,7 +157,7 @@ img {
 form {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
   align-self: center;
   height: auto;
 }

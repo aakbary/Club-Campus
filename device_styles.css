@@ -1,5 +1,9 @@
 /* Mobile Device Media Query */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 700px) {
+  body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   .container {
     padding: 0 20px;
     max-width: 100%;
@@ -43,12 +47,25 @@
     height: 95px;
     transition: 0.2s;
   }
+
+  #submit-review {
+    align-items: center;
+  }
+  form {
+    max-width: 200px;
+    align-items: center;
+  }
+  textarea {
+    max-width: 100%;
+  }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 701px) and (max-width: 1024px) {
   body {
     font-size: 16px;
     padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   h1 {
     font-size: 6vw;
@@ -84,12 +101,9 @@
   .circles {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     gap: 10px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
     position: relative;
-    top: -90px;
   }
 }
