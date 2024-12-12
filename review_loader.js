@@ -6,7 +6,7 @@ function loadReviews() {
     .then((response) => response.text())
     .then((data) => {
       var allReviews = data.split("~");
-      var reviewSection = document.getElementById("reviews-section");
+      var reviewSection = document.getElementById("reviews");
       console.log(allReviews.length);
       if (allReviews.length === 1) {
         var noReivews = document.createElement("p");
@@ -22,7 +22,7 @@ function loadReviews() {
 
           var result = getReview(name, rating, writtenReview);
           result.classList.add("review");
-          reviewSection.appendChild(result);
+          reviewSection.prepend(result);
         }
         displayAvgReview();
       }

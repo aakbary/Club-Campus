@@ -81,6 +81,10 @@ function postReivew(clubName, name, rating, writtenReivew) {
   formData.append("entry.330908542", name);
   formData.append("entry.1197122180", rating);
   formData.append("entry.692624728", writtenReivew);
+  formData.append(
+    "entry.1571931015",
+    name + "|" + rating + "|" + writtenReivew + "~"
+  );
 
   fetch(formURL, {
     method: "POST",
